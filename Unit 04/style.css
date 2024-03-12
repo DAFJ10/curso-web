@@ -1,0 +1,70 @@
+h1 {
+  color: orange;
+  text-align: center;
+  border: 5px solid red;
+}
+
+#teste1 {
+    color: lightseagreen;
+}
+
+.teste2{
+    background-color:darkgreen;
+}
+
+
+h6 {
+    color: #39c5ff;
+}
+
+h5{
+    color: rgb(60,123,152);
+}
+
+.teste3 {
+    background-color:rgba(60, 123, 152, 0.5)
+}
+
+p.dotted { border-style: dotted; }
+p.dashed { border-style: dashed; }
+p.solid { border-style: solid; }
+p.double { border-style: double; }
+p.groove { border-style: groove; }
+p.ridge { border-style: ridge; }
+p.inset { border-style: inset; }
+p.outset { border-style: outset; }
+p.none{ border-style: none; }
+p.hidden { border-style: hidden; }
+p.mix { border-style: dotted dashed solid double; }
+
+p.um{
+    border-style: solid;
+    border-width: 5px;
+}
+
+p.dois{
+    border-style: solid;
+    border-width: medium;
+}
+
+p.tres{
+    border-style: solid;
+    border-width: 3px 11px 5px 21px;
+}
+
+p.redondo1{
+    border: 2px solid red;
+    border-radius: 5px;
+}
+
+p.redondo2{
+    border: 2px solid green;
+    border-radius: 8px;
+}
+
+p.redondo3{
+    border: 2px solid blue;
+    border-radius: 12px;
+}
+
+
