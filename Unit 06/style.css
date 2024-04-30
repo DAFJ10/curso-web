@@ -98,7 +98,57 @@ ul.submenu {
     text-decoration: none;
 }
 
-.meni li:hover > ul.submenu{
+.menu li:hover > ul.submenu{
     display: block;
 
+}
+
+.ex-fixed {
+    background-color: #ddd;
+    border:1px solid #000;
+    padding: 16px;
+    position: fixed;
+    bottom: 0;
+}
+
+.ex-relative {
+    background-color: #ff8855;
+    border:1px solid #000;
+    padding: 16px;
+    position: relative;
+    left: 50px;
+    bottom: 200px;
+}
+
+.ex-absolute {
+    background-color: #00aaff;
+    border:1px solid #000;
+    padding: 16px;
+    position: absolute;
+    top: 0;
+}
+
+.ex2-relative {
+    background-color: #ff8855;
+    border:1px solid #000;
+    padding: 16px;
+    position: relative;
+
+}
+
+.ex2-relative {
+    background-color: #4fe;
+    border:1px solid #000;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.ex-sticky{
+    background-color: #4fe;
+    border:1px solid #000;
+    padding: 10px;
+    position: sticky;
+    top: 50px;
 }
