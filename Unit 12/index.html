@@ -16,7 +16,42 @@
 
         </select>
 
+        <input id="inputItem">
+        <button onclick="adicionarItem()">
+            Adicionar Item
+        </button>
+        <button onclick="removerItem()">
+            Remover Item
+        </button>
     </div>
+
+        <h1>Funções	- Calculadora</h1>
+
+        <div>
+            <input id="input1">
+            <button onclick="soma()">+</button>
+            <button onclick="sub()">-</button>
+            <button onclick="mult()">*</button>
+            <button onclick="divi()">/</button>
+            <input id="input2">
+            <label>=</label>
+            <label id="resultado"></label>
+        </div>
+
+        <h1>Funções - Média</h1>
+
+        <div>
+            <input id="numeroInputs">
+            <button onclick="criarInputs()">Criar Inputs</button>
+            <h2>Média</h2>
+            <div id="divInputs">
+
+            </div>
+
+            <button onclick="calcularMedia()">Calcular Média</button>
+            <label>=</label>
+            <label id="mediaFinal"></label>
+        </div>
     
         <script src="script.js"></script>
 </body>
