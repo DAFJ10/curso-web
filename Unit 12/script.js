@@ -96,7 +96,7 @@ function divi(){
     var num1 = parseInt(document.getElementById("input1").value);
     var num2 = parseInt(document.getElementById("input2").value);
 
-    document.getElementById("resultado").innerHTML = num1 / num2
+    document.getElementById("resultado").innerHTML = num1 / num2;
 }
 
 function criarInputs(){
@@ -104,10 +104,23 @@ function criarInputs(){
     var htmlFinal = ""
 
     for(var i = 0; i <numInputs; i++){
-        htmlFinal += "<input> <br><br>";
+        htmlFinal += "<input class='inputMedia'> <br><br>";
     }
 
     document.getElementById("divInputs").innerHTML = htmlFinal;
+}
+
+function calcularMedia() {
+    var inputs = document.getElementsByClassName("inputMedia");
+    var numeroInputs = inputs.length;
+
+    var soma = 0;
+
+    for(var i= 0; i < numeroInputs; i++){
+        soma += parseInt(inputs[i].value)
+    }
+
+    document.getElementById("mediaFinal").innerHTML = soma/ numeroInputs;
 }
 
 
