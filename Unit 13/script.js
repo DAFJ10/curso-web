@@ -48,12 +48,13 @@ var novaPessoa = {
     nome: "Zezinha", 
     sobrenome: "Silvio", 
     idade: 21,
+
     andar:  function() {
-        alert(this.nome +" está andando e tem "+ this.idade+ " anos." )
+        //alert(this.nome +" está andando e tem "+ this.idade+ " anos." )
     }
 }
 
-novaPessoa.andar()
+novaPessoa.andar();
 
 function People(_nome, _sobrenome, _idade){
     this.nome = _nome;
@@ -80,7 +81,7 @@ function adicionarItem(){
     var quantidadeNovo = $("#quantidadeId").val();
     var precoNovo = $("#precoId").val();
 
-    var novoItem = new Item(nomeItemNovo, quantidadeNovo, precoNovo)
+    var novoItem = new Item(nomeItemNovo, quantidadeNovo, precoNovo);
 
     itens.push(novoItem);
     console.log(itens);
@@ -88,13 +89,28 @@ function adicionarItem(){
 }
 
 function atualizaTabela(item){
-    var htmlFinal = "<tr>"
+    var htmlFinal = "<tr>";
 
     htmlFinal +="<td>" + item.nomeItem + "</td>";
     htmlFinal +="<td>" + item.quantidadeItem + "</td>";
     htmlFinal +="<td>" + item.precoItem + "</td>";
 
-    htmlFinal += "</tr>"
+    htmlFinal += "</tr>";
 
-    $("tabelaItens").append(htmlFinal);
+    $("#tabelaItens").append(htmlFinal);;
+}
+
+function fecharCompra(){
+    var htmlFinal = "Você comprou ";
+
+    var soma = 0;
+
+    for (var i=0; i< itens.length; i++) {
+        htmlFinal += itens[i].quantidadeItem + " "+ itens[i].nomeItem+ "-";
+        soma += itens[i].quantidade * itens[i].precoitem;
+    }
+
+    htmlFinal += " Total: R$ " + soma;
+
+    $("#fechamentoCompra").text(htmlFinal);
 }

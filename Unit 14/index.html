@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit 14 - API/AJAX</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>"
+</head>
+<body>
+
+    <h2>API - Star Wars</h2>
+
+    <div>
+        <button id="botaoBuscaPersonagem">
+            Buscar Personagem Aleatório
+        </button><br>
+
+        Personagem Escolhido:
+        <label id="personagemAleatorioId"></label>
+    </div>
+
+    <div>
+        <input id="buscaFilmaPorNomePersonagem">
+        <button id="botaoBuscaFilmeId">
+            Buscar Filme por Nome de Personagem
+        </button>
+
+        Filme de <label id="labelFilmeId"></label>
+    </div>
+
+    <div>
+        <table id="tabelaFilmesId" border="1">
+            <tr>
+                <th>Nome</th>
+                <th>Episódio</th>
+                <th>Diretor</th>
+            </tr>
+        </table>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
