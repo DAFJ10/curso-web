@@ -38,6 +38,8 @@ function preencherLabelPersonagem(data){
     $("#personagemAleatorioId").text(data.name);
 }
 
+$("#botaoBuscaFilmeId").click(buscarFilmePorPersonagem);
+
 function buscarFilmePorPersonagem(){
     var nome = $("#buscaFilmePorNomePersonagem").val();
     $.get("https://swapi.dev/api/people/?search="+nome, popularTabela);
@@ -45,7 +47,21 @@ function buscarFilmePorPersonagem(){
 
 function popularTabela(data){
     console.log(data.results[0].name);
-    $("#labelFilmedeId").text(data.results[0].name);
+    $("#labelFilmeId").text(data.results[0].name);
+
+    $("#tabelaFilmesId").find("tr:gt(0)").remove();
+
+    for (var i = 0; i < data.results[0].films.length; i++){
+        $.get(data.results[0].films[i], criaLinha);
+    }
 }
 
-//falta explicar
+function criaLinha(data){
+    var htmlFinal =
+    "<tr><td>" + data.title + "</td>"+
+    "<td>" + data.episode_id + "</td>"+
+    "<td>" + data.director + "</td></tr>";
+
+    $("#tabelaFilmesId").append(htmlFinal)
+}
+    
