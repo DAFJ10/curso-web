@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image:url("assets/terra.webp");
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: greenyellow;
+}
+
+h3 {
+    color: lightseagreen;
+}
+
+h4 {
+    color: white;
+}
+
+header {
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    background-color: #ddd;
+    overflow: hidden;
+}
+
+nav li {
+    float: left;
+}
+
+nav a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;   
+
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+.mob {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
